@@ -5,13 +5,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root',
 })
 export class CalculationService {
-  apiUrl = 'http://localhost:5000/api/';
+  apiUrl = 'https://localhost:5001/api/calculator/';
 
   constructor(private http: HttpClient) {}
 
   getAddtion(number1: number, number2: number) {
+
     return this.http.get<number>(
-      this.apiUrl + 'add/' + number1 + '/' + number2
+      this.apiUrl + 'add/' + number1 + '/' + number2,
     );
   }
 

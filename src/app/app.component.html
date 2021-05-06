@@ -8,12 +8,12 @@
 <section class="calculator-wrapper">
   <div class="display">
     <div *ngIf="result == null">
-        <h2 *ngIf="!number1Set || displayNumber2.length == 0">{{displayNumber1}}</h2>
-        <h2 *ngIf="displayNumber2.length > 0">{{displayNumber2}}</h2>
+        <h2 *ngIf="!displayNumber2">{{displayNumber1}}</h2>
+        <h2 *ngIf="displayNumber2">{{displayNumber2}}</h2>
     </div>
-    <div *ngIf="result != null">
-      <h1>{{result}}</h1>
-    </div>
+    <!-- <div *ngIf="result != null">
+      <h1>{{result+ " result"}}</h1>
+    </div> -->
   </div>
   <section class="button-container">
     <button class="button-0" (click)="setNumber(0)">0</button>
